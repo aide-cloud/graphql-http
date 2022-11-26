@@ -1,4 +1,4 @@
-module graphql-http
+module github.com/aide-cloud/graphql-http
 
 go 1.18
 
