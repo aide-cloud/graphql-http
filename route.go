@@ -65,7 +65,7 @@ func NewNetHttpHandler(root any, content embed.FS) *relay.Handler {
 		panic(fmt.Sprintf("reading embedded schema contents: %v", err))
 	}
 
-	return &relay.Handler{Schema: graphql.MustParseSchema(s, root)}
+	return &relay.Handler{Schema: graphql.MustParseSchema(s, root, graphql.UseFieldResolvers())}
 }
 
 func NewGraphQKratosHttpLHandlerFunc(mutationPath string) http.HandlerFunc {
